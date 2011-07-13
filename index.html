@@ -1,12 +1,38 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!-- Работает пока только в Chrome -->
+
 <html>
 	<head>
 		<title>Audio Input Testing</title>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-		<meta http-equiv="X-UA-Compatible" content="IE=7" />
-		<meta name="viewport" content="width=device-width" />
-	</head>
-	<body>
 
+		<!-- Chrome может определять язык распознавания исходя из значения аттрибута content -->
+		<meta http-equiv='Content-Language' content="ru_RU" />
+
+		<style type="text/css">
+			.test {
+				margin: 50px auto;
+				width: 800px;
+			}
+
+			.test-input {
+				display: block;
+				font-size: 30px;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body lang="ru_RU">
+		<div class="test">
+			<!--
+				Народ в интернетах так же пишет, что можно задавать аттрибут lang="ru_RU"
+				самому инпуту. Т. е. теоретически можно нафигачить несколько инпутов, заточенных
+				под распознавание разных языков. Ну или JS'ом как-то по-умному менять язык.
+				Проверил - работает, пример (тренеруемся во французском!):
+				<input type="text" class="test-input" x-webkit-speech="x-webkit-speech" lang="fr" />
+			-->
+			<input type="text" class="test-input" x-webkit-speech="x-webkit-speech" />
+		</div>
 	</body>
 </html>
